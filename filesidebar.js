@@ -144,7 +144,7 @@ function addsidebar(getree,sidebar_css,filetypes){
     var a = document.createElement('a');
     li.appendChild(a);
     a.innerHTML = '<strong>home</strong>';
-    a.setAttribute('href','/#');
+    a.setAttribute('href',document.location.href.split('#')[0].split('?')[0]);
 
 }
 
