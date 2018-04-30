@@ -59,9 +59,10 @@ function create_contents(div_nav) {
 }
 
 
+
 function github_filetree (getree, div_nav, filetypes) {
 
-    z_da_t = getree.tree;
+    var z_da_t = getree.tree;
     for (var k = 0; k <= z_da_t.length - 1; k++) {
         var pa = z_da_t[k]['path'];
         var type_ = pa.split('.');
@@ -119,6 +120,7 @@ function fucos() {
 }
 
 
+
 function addsidebar(getree,sidebar_css,filetypes){
     var div_sidebar = document.querySelector(sidebar_css)
     //div_nav.innerText = '';
@@ -141,16 +143,16 @@ function addsidebar(getree,sidebar_css,filetypes){
     var a = document.createElement('a');
     li.appendChild(a);
     a.innerHTML = '<strong>home</strong>';
-    a.setAttribute('href',document.location.href.split('#')[0].split('?')[0]);
+    a.setAttribute('href', document.location.href.split('#')[0].split('?')[0]);
+
 }
+
 
 
 function make_filenav(filenav_param){
     if (!filenav_param.file_tree_url && !filenav_param.gtihub_repo) {
         console.log("file_tree_url and gtihub_repo is null")
         return;
-    }else{
-
     };
 
     if (filenav_param.file_tree_url) {
@@ -158,14 +160,14 @@ function make_filenav(filenav_param){
     }else{
         var file_tree = "https://api.github.com/repos/" +
         filenav_param.gtihub_repo +
-        "/git/trees/master?recursive=1&_="+
-        Date.parse(new Date());
-    }
+        "/git/trees/master?recursive=1" ;//&_="+
+        //Date.parse(new Date());
+    };
 
 
     var filetypes = filenav_param.filetypes || ['md']; //
     var sidebar_css = filenav_param.sidebar_css || 'div.sidebar-nav'; //
-    var home = filenav_param.gtihub_repo.split('/')[1] || '#'
+
 
     ajax({
         method: 'get',
@@ -184,7 +186,7 @@ function make_filenav(filenav_param){
     var x = document.location.href.split('?')[0];
     setInterval(function(){
         if (!document.querySelector('#addsidebarok')) {
-            addsidebar(getree, sidebar_css,home,filetypes);
+            addsidebar(getree, sidebar_css,filetypes);
             console.log('sidebar 1');
         }
         if (document.location.href.split('?')[0]!=x) {
