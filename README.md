@@ -13,8 +13,9 @@ create docment dir to docrify sidebar.md
 - 使用：
 
 ```html
-<script src="https://raw.githubusercontent.com/xinmu99/docDirTreeToMd/master/filesidebar.js"> </script>
+<script src="https://xinmu99.github.io/docDirTreeToMd/filesidebar.js"></script>
 <script>
+    var = getree;
     make_filenav ({
         filetypes : ['md'], // 筛选文件 默认
         file_tree_url : null,
