@@ -13,7 +13,7 @@ create docment dir to docrify sidebar.md
 - 使用：
 
 ```html
-<script src="https://github.com/xinmu99/docDirTreeToMd/blob/master/filesidebar.js"> </script>
+<script src="https://raw.githubusercontent.com/xinmu99/docDirTreeToMd/master/filesidebar.js"> </script>
 <script>
     make_filenav ({
         filetypes : ['md'], // 筛选文件 默认
