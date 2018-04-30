@@ -4,6 +4,59 @@ create docment dir to docrify sidebar.md
 
 文件目录树生成 markdown 目录导航  
 
+
+生成文档书目，比如docsify sidebar，自动文件夹md导航
+
+- 样例：https://peacecn21st.github.io/revere_life/#/
+
+
+- 使用：
+
+```html
+<script src="https://github.com/xinmu99/docDirTreeToMd/blob/master/filesidebar.js"> </script>
+<script>
+    make_filenav ({
+        filetypes : ['md'], // 筛选文件 默认
+        file_tree_url : null,
+        gtihub_repo: "owner/repo",
+        sidebar_css: 'div.sidebar-nav',
+    });
+</script>
+```
+
+
+
+### 参数说明
+
+> filetypes : ['md'], // 筛选文件类型， 默认md，可略
+> 
+> file_tree_url : null,  // 获取文档树json url ， 默认 github api ，可略 
+>
+>   - > 返回json数据格式 ：
+>     > ~~~~
+>     > {
+>     >   "tree": [
+>     >             {"path": "README.md",
+>     >             },
+>     >             { "path": "books.md",
+>     >             },
+>     >             { "path": "democratize_peacefully/README.md",
+>     >             }
+>     >     	]
+>     >  }
+>     > ~~~~
+>
+>
+> gtihub_repo:  file_tree_url  为空，默认使用gihub，则必须提供 "owner/repo"
+>  
+> sidebar_css: 'div.sidebar-nav',  插入导航的位置原素css
+
+
+
+## 自己生成文件目录 可以用以下py脚本
+
+
+
 应用于 docrify sidebar.md
 
 - 文件类型过滤 说明
