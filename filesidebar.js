@@ -1,6 +1,5 @@
 //-*- coding: utf-8 -*-
 
-
 function ajax(opt) {
         opt = opt || {};
         opt.method = opt.method.toUpperCase() || 'POST';
@@ -58,7 +57,6 @@ function create_contents(div_nav) {
         a.innerText = item.innerText;
     });
 }
-
 
 
 function github_filetree (getree, div_nav, filetypes) {
@@ -121,7 +119,6 @@ function fucos() {
 }
 
 
-
 function addsidebar(getree,sidebar_css,filetypes){
     var div_sidebar = document.querySelector(sidebar_css)
     //div_nav.innerText = '';
@@ -145,11 +142,7 @@ function addsidebar(getree,sidebar_css,filetypes){
     li.appendChild(a);
     a.innerHTML = '<strong>home</strong>';
     a.setAttribute('href',document.location.href.split('#')[0].split('?')[0]);
-
 }
-
-
-
 
 
 function make_filenav(filenav_param){
@@ -174,7 +167,6 @@ function make_filenav(filenav_param){
     var sidebar_css = filenav_param.sidebar_css || 'div.sidebar-nav'; //
     var home = filenav_param.gtihub_repo.split('/')[1] || '#'
 
-    var getree = [];
     ajax({
         method: 'get',
         url: file_tree,
