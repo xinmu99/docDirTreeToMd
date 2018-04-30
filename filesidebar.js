@@ -1,5 +1,6 @@
 //-*- coding: utf-8 -*-
 
+
 function ajax(opt) {
         opt = opt || {};
         opt.method = opt.method.toUpperCase() || 'POST';
@@ -143,7 +144,7 @@ function addsidebar(getree,sidebar_css,filetypes){
     var a = document.createElement('a');
     li.appendChild(a);
     a.innerHTML = '<strong>home</strong>';
-    a.setAttribute('href', document.location.href.split('#')[0].split('?')[0]);
+    a.setAttribute('href', document.location.href.split('#')[0].split('?')[0]+'#');
 
 }
 
@@ -168,7 +169,7 @@ function make_filenav(filenav_param){
     var filetypes = filenav_param.filetypes || ['md']; //
     var sidebar_css = filenav_param.sidebar_css || 'div.sidebar-nav'; //
 
-
+    var getree;
     ajax({
         method: 'get',
         url: file_tree,
