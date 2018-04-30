@@ -1,0 +1,23 @@
+
+
+/* sidebar githubtree */
+.githubtree ul li.active>a {
+    border-right: 2px solid;
+    color: green;
+    font-weight: 600;
+}
+
+.githubtree>ul {
+    padding-left:10px;
+}
+.githubtree>ul ul{
+    padding-left:18px;
+}
+.githubtree li{
+    margin-left: 0px;
+    padding-left:0px;
+}
+
+ul[folder]>a {
+    font-family: -webkit-body;
+}
